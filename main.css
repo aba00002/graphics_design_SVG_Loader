@@ -1,0 +1,79 @@
+body{
+    width: 12vw;
+    height: 12vh;
+    margin: 170px auto;
+}
+
+#missiles {
+    animation: shoot 4.5s linear infinite;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(1000px);
+    }
+}
+
+
+#Jet {
+    animation: jet 4s linear infinite alternate-reverse;
+}
+
+@keyframes jet{
+    0%{
+        transform: translateX(0px);
+    }
+
+    25%{
+        transform: translateX(-200px);
+    }
+
+    50% {
+        transform: translateX(-400px);
+    }
+
+    75%{
+        transform: translateX(-100px);
+    }
+
+    100%{
+        transform: translateX(400px);
+    }
+}
+
+div {
+    animation: zoom 5s linear infinite alternate;
+}
+
+@keyframes zoom{
+0%{
+transform: scale(1, 1);
+}
+25%{
+transform: scale(1.02,1.02);
+}
+75%{
+transform: scale(0.9, 0.9);
+}
+100%{
+transform: scale(1, 1);
+}
+}
+
+#Jet-Outter-flame, #Jet-inner-flame {
+    transform-origin: 256px 509px;
+    animation: flames 4s linear infinite;
+}
+
+@keyframes flames{
+    0%{
+        transform: translateY(0px)
+    }
+
+    100%{
+        transform: translateY(20px);
+    }
+}
